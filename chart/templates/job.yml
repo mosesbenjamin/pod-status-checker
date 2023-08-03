@@ -1,0 +1,21 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  labels:
+    app: {{ .Values.appName }}
+  name: {{ .Values.appName }}
+spec:
+  completions: {{ .Values.completions }}
+  parallelism: {{ .Values.parallelism }}
+  template:
+    spec:
+      serviceAccountName: "{{ .Values.appName }}-sa"
+      containers:
+        - image: "{{ .Values.imageName }}"
+          name: {{ .Values.appName }}-{{ randAlphaNum 5 | lower}}
+          # Uncomment lines 18-20 to set an environment variable POD_STATUS that the 
+          # program should produce a table listing for in the specified state
+          # env:
+          # - name: POD_STATUS
+          #   value: "Error"
+      restartPolicy: Never

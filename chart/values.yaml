@@ -1,0 +1,4 @@
+appName: check-pod-status
+imageName: 127.0.0.1:5001/check-pod-status
+completions: 1
+parallelism: 1
