@@ -1,6 +1,10 @@
-### NB: Tested and guaranteed to work on MacOSX
+### [Ask](assets/task.md)
+
+### Implementation
+NB: Tested and guaranteed to work on MacOSX
 Pre-requisite:
 - Ensure make is installed so as to be able to run `make <target>`, for example
+- Ensure docker is up and running
 
 ### Commands
 - Run `make run_end_to_end` to bootstrap and deploy the application
