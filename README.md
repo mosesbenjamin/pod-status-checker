@@ -1,8 +1,7 @@
 ### [Ask](assets/task.md)
 
-### Implementation
+### Pre-requisite:
 NB: Tested and guaranteed to work on MacOSX
-Pre-requisite:
 - Ensure make is installed so as to be able to run `make <target>`, for example
 - Ensure docker is up and running
 
