@@ -6,5 +6,5 @@ Build and debug the program using an IDE (Visual Studio Code or something else).
 Step 2 - Containerize
 Build a Dockerfile for your program.
 
-Step 2 - Deploy your Container
+Step 3 - Deploy your Container
 Deploy your container (preferably using Helm) into your cluster. This can be either a K8s Job, Deployment or Pod.
