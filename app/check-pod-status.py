@@ -5,7 +5,7 @@ from typing import List, Tuple
 
 VALID_STATUSES = ["Terminating", "Error", "Completed", "Running", "CreateContainerConfigError"]
 
-def get_pods_in_status(pod_status: str) -> List[Tuple[str, str, str]]:
+def get_pods_in_status(pod_status: str) -> List[Tuple[str, str, str, str]]:
      # Check if the script is running inside a Kubernetes Pod
     in_cluster = os.environ.get("KUBERNETES_SERVICE_HOST") is not None
 
@@ -32,7 +32,7 @@ def get_pods_in_status(pod_status: str) -> List[Tuple[str, str, str]]:
     return pods_list
 
 if __name__ == "__main__":
-    pod_status = os.environ.get("POD_STATUS")
+    pod_status = (os.environ.get("POD_STATUS")).title()
 
     if pod_status not in VALID_STATUSES:
         print(f"""
